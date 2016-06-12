@@ -1,6 +1,7 @@
 package com.iwangbo.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -15,18 +16,21 @@ public class BlogServiceImpl implements BlogService {
 
     @Resource
     private BlogMapper blogMapper;
-    
+
     @Override
-    public List<Blog> list() {
-        List<Blog> blogList = blogMapper.list();
-        return blogList;
+    public List<Blog> list(Map<String, Object> map) {
+        return blogMapper.list(map);
     }
 
     @Override
     public List<Blog> countList() {
         return blogMapper.countList();
     }
-    
+
+    @Override
+    public Blog getById(int id) {
+        return blogMapper.getById(id);
+    }
     
 
 }

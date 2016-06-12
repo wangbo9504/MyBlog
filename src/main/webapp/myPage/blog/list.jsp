@@ -11,7 +11,7 @@
         <ul>
              <c:forEach items="${blogList }" var="blog" >
                 <li>
-                    <p><span class="title"><a href="#">${blog.title }</a></span></p>
+                    <p><span class="title"><a href="${pageContext.request.contextPath}/blog/articles/${blog.id}.html" >${blog.title }</a></span></p>
                     <p><span class="summary">${blog.summary }...</span></p> 
                     <span class="info">发表于<fmt:formatDate value="${blog.releaseDate }" type="date" pattern="yyyy-MM-dd HH:mm"/></span><br>
                 </li> 

@@ -9,4 +9,9 @@ public interface BlogTypeMapper {
      * 查询博客类型及相关类型的博客数量
      */
     List<BlogType> countList();
+    
+    /*
+     * 根据id查询博客类型
+     */
+    BlogType getById(int id);
 }

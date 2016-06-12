@@ -13,6 +13,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>${pageTitle }</title>
     <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/styles/list.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/styles/view.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/favicon.ico" rel="SHORTCUT ICON">
     <script src="${pageContext.request.contextPath}/jQuery/jQuery-2.1.4.min.js"></script>
     <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
@@ -48,7 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                  <div class="datas">
                     <ul>
                         <c:forEach items="${blogTypeList }" var="blogType">
-                            <li><a href="#">${blogType.typeName }(${blogType.blogCount })</a></li>
+                            <li><a href="${pageContext.request.contextPath}/index.html?typeId=${blogType.id }">${blogType.typeName }(${blogType.blogCount })</a></li>
                         </c:forEach>
                     </ul>
                  </div>
@@ -62,7 +63,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                  <div class="datas">
                     <ul>
                         <c:forEach items="${blogDateList }" var="blogDate">
-                            <li><a href="#">${blogDate.releaseDateStr }(${blogDate.blogCount })</a></li>
+                            <li><a href="${pageContext.request.contextPath}/index.html?releaseDateStr=${blogDate.releaseDateStr }">${blogDate.releaseDateStr }(${blogDate.blogCount })</a></li>
                         </c:forEach>
                     </ul>
                  </div>

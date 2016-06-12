@@ -7,4 +7,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="countList" resultType="BlogType">
 		SELECT bt.id,bt.typeName,COUNT(b.id) AS blogCount FROM blog b RIGHT JOIN blogtype bt ON bt.id=b.typeId GROUP BY bt.typeName;
 	</select>
+	
+	<select id="getById" parameterType="int" resultType="BlogType">
+		SELECT * FROM blogtype WHERE id=#{id}
+	</select>
 </mapper>
