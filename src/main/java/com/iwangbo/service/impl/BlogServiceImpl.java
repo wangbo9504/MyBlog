@@ -31,6 +31,11 @@ public class BlogServiceImpl implements BlogService {
     public Blog getById(int id) {
         return blogMapper.getById(id);
     }
+
+    @Override
+    public int getTotal(Map<String, Object> map) {
+        return blogMapper.getTotal(map);
+    }
     
 
 }

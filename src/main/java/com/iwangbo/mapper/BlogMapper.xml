@@ -25,6 +25,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</if>
 		</where>
 		ORDER BY id DESC
+		<if test="dbIndex!=null and dbNumber!=null">
+			limit #{dbIndex},#{dbNumber}
+		</if>
 	</select>
 	
 	<select id="countList" resultMap="BlogResult">
@@ -33,5 +36,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	<select id="getById" parameterType="int" resultMap="BlogResult">
 		SELECT * FROM blog WHERE id=#{id}
+	</select>
+	
+	<select id="getTotal" parameterType="Map" resultType="int">
+		SELECT count(*) FROM blog 
+		<where>
+			<if test="typeId!=null and typeId!='' ">
+				and typeId=#{typeId }
+			</if>
+			<if test="releaseDateStr!=null and releaseDateStr!='' ">
+				and DATE_FORMAT(releaseDate,'%Y年%m月')=#{releaseDateStr }
+			</if>
+		</where>
 	</select>
 </mapper>

@@ -21,4 +21,9 @@ public interface BlogService {
      * 根据id查询博客
      */
     Blog getById(int id);
+    
+    /*
+     * 获取总记录数
+     */
+    int getTotal(Map<String,Object> map);
 }

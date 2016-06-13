@@ -20,3 +20,11 @@
         </ul>
     </div>
 </div>
+
+<div style="text-align:center">
+    <nav>
+      <ul class="pagination pagination-sm">
+        ${pageCode }
+      </ul>
+    </nav>
+</div>
