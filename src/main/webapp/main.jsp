@@ -14,6 +14,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/styles/list.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/styles/view.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/styles/comment.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/favicon.ico" rel="SHORTCUT ICON">
     <script src="${pageContext.request.contextPath}/jQuery/jQuery-2.1.4.min.js"></script>
     <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
