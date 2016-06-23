@@ -11,4 +11,31 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="getById" parameterType="int" resultType="BlogType">
 		SELECT * FROM blogtype WHERE id=#{id}
 	</select>
+	
+	<select id="getTotal" parameterType="Map" resultType="int">
+		SELECT count(*) FROM blogtype 
+	</select>
+	
+	<select id="list" parameterType="Map" resultType="BlogType">
+		SELECT * FROM blogtype
+		<if test="dbIndex!=null and dbNumber!=null">
+			limit #{dbIndex},#{dbNumber}
+		</if>
+	</select>
+	
+	<delete id="delete" parameterType="java.util.List">
+		DELETE FROM blogtype WHERE id IN (
+			<foreach collection="list" item="item" separator=",">
+				#{item}
+			</foreach>
+		)
+	</delete>
+	
+	<insert id="save" parameterType="BlogType" >
+		INSERT INTO blogType VALUES(null,#{typeName})
+	</insert>
+	
+	<update id="update" parameterType="BlogType">
+		UPDATE blogType SET typeName=#{typeName} WHERE id=#{id}
+	</update>
 </mapper>

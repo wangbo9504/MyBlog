@@ -4,20 +4,13 @@
 <div class="col-md-12" style="padding-top: 10px">
 <nav class="navbar navbar-inverse">
           <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">导航栏</a>
-            </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
+                <li><a></a></li>
                 <li class="active"><a href="${pageContext.request.contextPath}/index.html">首页</a></li>
-                <li><a href="#about">关于博主</a></li>
+                <li><a href="${pageContext.request.contextPath}/myPage/info.jsp" target="_blank">关于博主</a></li>
                 <li><a href="#contact">联系我</a></li>
+                <li><a href="${pageContext.request.contextPath}/login.jsp">博客后台</a></li>
               </ul>
                 
                 <form class="navbar-form navbar-right" style="padding-right:40px"> 

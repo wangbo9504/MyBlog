@@ -1,0 +1,9 @@
+#titleLink a:link,a:visited {
+    color:blue;
+    text-decoration: none;
+}
+
+#titleLink a:hover {
+    color: orange;
+    text-decoration: underline;
+}

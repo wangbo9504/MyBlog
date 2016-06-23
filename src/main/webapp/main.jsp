@@ -11,13 +11,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <base href="<%=basePath%>">
     <title>${pageTitle }</title>
-    <link href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="${pageContext.request.contextPath}/styles/list.css" rel="stylesheet" />
-    <link href="${pageContext.request.contextPath}/styles/view.css" rel="stylesheet" />
-    <link href="${pageContext.request.contextPath}/styles/comment.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/static/styles/list.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/static/styles/view.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/static/styles/comment.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/static/styles/nav.css" rel="stylesheet" />
     <link href="${pageContext.request.contextPath}/favicon.ico" rel="SHORTCUT ICON">
-    <script src="${pageContext.request.contextPath}/jQuery/jQuery-2.1.4.min.js"></script>
-    <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/static/jquery-easyui-1.3.3/jquery.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/bootstrap/js/bootstrap.min.js"></script>
   </head>
   
   <body>
@@ -34,17 +35,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <div class="col-md-3">
             <div class="data_list">
                 <div class="data_list_title">
-                    <img src="${pageContext.request.contextPath}/images/user_icon.png" />博主信息
+                    <img src="${pageContext.request.contextPath}/static/images/user_icon.png" />&nbsp;&nbsp;博主信息
                 </div>
                 
                 <div class="user_image">
-                    <img alt="博主" src="${pageContext.request.contextPath}/images/blogger.jpg" />
+                    <img alt="博主" src="${pageContext.request.contextPath}/static/images/blogger.jpg" />
                 </div>
             </div>
             
             <div class="data_list">
                  <div class="data_list_title">
-                    <img src="${pageContext.request.contextPath}/images/byType_icon.png" />按日志类别
+                    <img src="${pageContext.request.contextPath}/static/images/byType_icon.png" />&nbsp;&nbsp;按日志类别
                  </div>
                  
                  <div class="datas">
@@ -58,7 +59,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
             <div class="data_list">
                 <div class="data_list_title">
-                    <img src="${pageContext.request.contextPath}/images/byDate_icon.png" />按日志日期
+                    <img src="${pageContext.request.contextPath}/static/images/byDate_icon.png" />&nbsp;&nbsp;按日志日期
                  </div>
                  
                  <div class="datas">

@@ -36,6 +36,31 @@ public class BlogServiceImpl implements BlogService {
     public int getTotal(Map<String, Object> map) {
         return blogMapper.getTotal(map);
     }
-    
 
+    @Override
+    public boolean getBlogByTypeId(String id) {
+        int num = blogMapper.getBlogByTypeId(id);
+        if(num>0) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    @Override
+    public int delete(Integer id) {
+        return blogMapper.delete(id);
+    }
+
+    @Override
+    public int add(Blog blog) {
+        return blogMapper.add(blog);
+    }
+
+    @Override
+    public int update(Blog blog) {
+        return blogMapper.update(blog);
+    }
+    
+    
 }

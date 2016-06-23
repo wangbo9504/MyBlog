@@ -33,17 +33,13 @@ public class InitComponent implements ServletContextListener,ApplicationContextA
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         ServletContext application = servletContextEvent.getServletContext();
         
-        //将日志类别信息放入application生命周期中
+        //将日志时间信息放入application生命周期中
         BlogService blogService = (BlogService) applicationContext.getBean("blogService");
-        System.out.println(blogService);
-        System.out.println("==================");
         List<Blog> blogDateList = blogService.countList();
         application.setAttribute("blogDateList", blogDateList);
         
-        ////将日志时间信息放入application生命周期中
+        ////将日志类别信息放入application生命周期中
         BlogTypeService blogTypeService = (BlogTypeService) applicationContext.getBean("blogTypeService");
-        System.out.println(blogTypeService);
-        System.out.println("==================");
         List<BlogType> blogTypeList = blogTypeService.countList();
         application.setAttribute("blogTypeList", blogTypeList);
     }

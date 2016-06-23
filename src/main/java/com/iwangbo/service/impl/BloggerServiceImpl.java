@@ -24,4 +24,11 @@ public class BloggerServiceImpl implements BloggerService{
         return bloggerMapper.getByUserName(userName);
     }
 
+    @Override
+    public Integer update(Blogger blogger) {
+        return bloggerMapper.update(blogger);
+    }
+    
+    
+
 }

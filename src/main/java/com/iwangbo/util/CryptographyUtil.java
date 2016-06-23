@@ -9,7 +9,7 @@ public class CryptographyUtil {
     }
     
     public static void main(String[] args) {
-        String password = "123456";
-        System.out.println("md5加密  :"+md5(password,"iwangbo"));
+        String password = "wb123456";
+        System.out.println("md5加密  :"+md5(password,"王博"));
     }
 }

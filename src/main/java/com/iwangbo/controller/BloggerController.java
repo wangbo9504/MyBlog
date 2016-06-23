@@ -25,12 +25,12 @@ public class BloggerController {
         Subject currentUser = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(
                 blogger.getUserName(),
-                CryptographyUtil.md5(blogger.getPassword(), "iwangbo")
+                CryptographyUtil.md5(blogger.getPassword(), "王博")
                 );
         try {
             currentUser.login(token);
             System.out.println("登陆成功");
-            return "redirect:/success.jsp";
+            return "redirect:/adminPage/main.jsp";
         }catch(Exception e) {
             e.printStackTrace();
             req.setAttribute("errorInfo", "用户名或密码错误");

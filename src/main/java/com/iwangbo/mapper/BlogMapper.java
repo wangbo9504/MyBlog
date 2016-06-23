@@ -26,4 +26,24 @@ public interface BlogMapper {
      * 获取总记录数
      */
     int getTotal(Map<String,Object> map);
+    
+    /*
+     * 查询传入的博客类别是否被外键关联外键关联(这里只返回int值，boolean判断放在Service中判断)
+     */
+    int getBlogByTypeId(String id);
+    
+    /*
+     * 删除博客
+     */
+    int delete(Integer id);
+    
+    /*
+     * 添加博客
+     */
+    int add(Blog blog);
+    
+    /*
+     * 修改博客
+     */
+    int update(Blog blog);
 }

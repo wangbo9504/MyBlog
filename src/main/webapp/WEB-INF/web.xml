@@ -82,7 +82,6 @@
   	
   	<servlet-mapping>
   		<servlet-name>springDispatcherServlet</servlet-name>
-  		<!-- 设置成/会拦截所有请求(包括css和js等静态资源),所以将.action后缀当作springmvc请求 -->
   		<url-pattern>*.action</url-pattern>
   	</servlet-mapping>
   	<servlet-mapping>

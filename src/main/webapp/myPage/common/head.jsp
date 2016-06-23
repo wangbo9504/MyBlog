@@ -2,7 +2,7 @@
 
 <div class="head">
     <div class="col-md-4">
-        <img alt="王博" src="${pageContext.request.contextPath}/images/myLogo.PNG" />
+        <img alt="王博" src="${pageContext.request.contextPath}/static/images/myLogo.PNG" />
     </div>
     
     <div class="col-md-8">

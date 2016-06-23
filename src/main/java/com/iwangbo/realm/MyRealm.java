@@ -2,6 +2,7 @@ package com.iwangbo.realm;
 
 import javax.annotation.Resource;
 
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -30,6 +31,7 @@ public class MyRealm extends AuthorizingRealm{
         String currentUser = (String)token.getPrincipal();
         Blogger blogger = bloggerService.getByUserName(currentUser);
         if(blogger!=null) {
+            SecurityUtils.getSubject().getSession().setAttribute("currentUser", blogger);
             AuthenticationInfo authInfo = new SimpleAuthenticationInfo(blogger.getUserName(),blogger.getPassword(),"xx");
             return authInfo;
         }else {

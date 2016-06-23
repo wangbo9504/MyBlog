@@ -8,7 +8,7 @@ import java.util.Date;
  *
  */
 public class Blog {
-    private int id; //编号
+    private Integer id; //编号
     private String title; //标题
     private String summary; //摘要
     private Date releaseDate; //发布日期
@@ -18,10 +18,10 @@ public class Blog {
     private Integer blogCount; // 博客数量 非博客实际属性，主要是 根据发布日期归档查询博客数量用
     private String releaseDateStr; // 发布日期字符串 只取年和月
     
-    public int getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getTitle() {

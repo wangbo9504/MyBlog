@@ -1,0 +1,29 @@
+.data_list .blog_title{
+	margin-top:20px;
+	text-align: center;
+}
+
+.data_list .blog_info{
+	text-align: center;
+}
+
+.data_list .verCode{
+	padding-top:10px;
+	padding-left:10px;
+	float: left;
+}
+
+.data_list .publish_comment{
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.data_list .blog_content{
+	margin-top:20px;
+	padding-bottom: 30px;
+}
+
+.data_list .publishButton{
+    padding-top:10px;
+    float: right;
+}

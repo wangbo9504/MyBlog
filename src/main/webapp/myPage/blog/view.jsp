@@ -33,7 +33,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img src="${pageContext.request.contextPath}/images/blog_show_icon.png" />博客信息
+        <img src="${pageContext.request.contextPath}/static/images/blog_show_icon.png" />&nbsp;&nbsp;博客信息
     </div>
     
     <div class="blog_title">
@@ -51,7 +51,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img src="${pageContext.request.contextPath}/images/comment_icon.png" />评论信息
+        <img src="${pageContext.request.contextPath}/static/images/comment_icon.png" />评论信息
     </div>
     
     <div class="commentDatas">
@@ -72,7 +72,7 @@
 
 <div class="data_list">
     <div class="data_list_title">
-        <img src="${pageContext.request.contextPath}/images/publish_comment_icon.png" />发表评论
+        <img src="${pageContext.request.contextPath}/static/images/publish_comment_icon.png" />发表评论
     </div>
     
     <div class="publish_comment">

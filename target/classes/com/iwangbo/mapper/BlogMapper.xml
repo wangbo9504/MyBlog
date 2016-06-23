@@ -23,6 +23,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="releaseDateStr!=null and !&quot;&quot;.equals(releaseDateStr.trim())">
 				and DATE_FORMAT(releaseDate,'%Y年%m月')=#{releaseDateStr }
 			</if>
+			<if test="title!=null and !&quot;&quot;.equals(title.trim())">
+				and title LIKE '%' #{title} '%'
+			</if>
 		</where>
 		ORDER BY id DESC
 		<if test="dbIndex!=null and dbNumber!=null">
@@ -49,4 +52,35 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			</if>
 		</where>
 	</select>
+	
+	<select id="getBlogByTypeId" parameterType="String" resultType="int">
+		SELECT COUNT(*) FROM blog WHERE typeId=#{id}
+	</select>
+	
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM blog WHERE id=#{id}
+	</delete>
+	
+	<insert id="add" parameterType="Blog">
+		INSERT INTO blog VALUES(null,#{title},#{summary},now(),#{content},#{blogType.id})
+	</insert>
+	
+	<update id="update" parameterType="Blog">
+		UPDATE blog
+		<set>
+			<if test="title!=null and title!='' ">
+				title=#{title},
+			</if>
+			<if test="summary!=null and summary!='' ">
+				summary=#{summary},
+			</if>
+			<if test="content!=null and content!='' ">
+				content=#{content},
+			</if>
+			<if test="blogType.id!=null ">
+				typeId=#{blogType.id},
+			</if>
+		</set>
+		WHERE id=#{id}
+	</update>
 </mapper>

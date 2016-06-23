@@ -5,6 +5,7 @@ package com.iwangbo.model;
  */
 public class PageBean {
 
+    //用于前台分页
     public PageBean(int page,int pageNumber,int totalNumber) {
         super();
         this.page = page;
@@ -12,6 +13,17 @@ public class PageBean {
         this.totalNumber = totalNumber;
         this.count();
     }
+
+    //用于后台分页，经过EasyUI封装，所以相对简单
+    public PageBean(int page, int pageNumber) {
+        super();
+        this.page = page;
+        this.pageNumber = pageNumber;
+        this.dbIndex = (this.page - 1) * this.pageNumber;
+        this.dbNumber = this.pageNumber;
+    }
+
+
 
     /*
      * 总条数

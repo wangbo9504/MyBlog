@@ -7,14 +7,14 @@ package com.iwangbo.model;
  */
 public class BlogType {
 
-    private int id; //编号
+    private Integer id; //编号
     private String typeName; //博客类型名称
-    private int blogCount; //数量
+    private Integer blogCount; //数量
     
-    public int getId() {
+    public Integer getId() {
         return id;
     }
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     public String getTypeName() {
@@ -23,10 +23,10 @@ public class BlogType {
     public void setTypeName(String typeName) {
         this.typeName = typeName;
     }
-    public int getBlogCount() {
+    public Integer getBlogCount() {
         return blogCount;
     }
-    public void setBlogCount(int blogCount) {
+    public void setBlogCount(Integer blogCount) {
         this.blogCount = blogCount;
     }
     

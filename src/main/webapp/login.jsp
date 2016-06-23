@@ -9,9 +9,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>博客系统后台登录页面</title> 
-    <link href="${pageContext.request.contextPath}/styles/login.css" rel="stylesheet" />
-    <script src="${pageContext.request.contextPath}/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
-    <script src="${pageContext.request.contextPath}/scripts/login.js"></script>
+    <link href="${pageContext.request.contextPath}/static/styles/login.css" rel="stylesheet" />
+    <script src="${pageContext.request.contextPath}/static/jquery-easyui-1.3.3/jquery.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/static/scripts/login.js"></script>
 </head> 
 
 <body>

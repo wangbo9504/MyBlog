@@ -1,6 +1,7 @@
 package com.iwangbo.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -15,16 +16,26 @@ public class CommentServiceImpl implements CommentService {
 
     @Resource
     private CommentMapper commentMapper;
-    
+
     @Override
-    public List<Comment> list(int blogId) {
-        return commentMapper.list(blogId);
+    public List<Comment> list(Map<String, Object> map) {
+        return commentMapper.list(map);
     }
 
     @Override
     public void add(Comment comment) {
         commentMapper.add(comment);
         
+    }
+
+    @Override
+    public int getTotal(Map<String, Object> map) {
+        return commentMapper.getTotal(map);
+    }
+
+    @Override
+    public int delete(Integer id) {
+        return commentMapper.delete(id);
     }
     
 }

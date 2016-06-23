@@ -13,4 +13,9 @@ public interface BloggerMapper {
      * 通过用户名查询用户
      */
     public Blogger getByUserName(String userName);
+    
+    /*
+     * 更新博主信息
+     */
+    Integer update(Blogger blogger);
 }

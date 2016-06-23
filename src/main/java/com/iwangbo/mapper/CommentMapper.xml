@@ -13,11 +13,28 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<association property="blog" column="blogId" select="com.iwangbo.mapper.BlogMapper.getById" />
 	</resultMap>
 	
-	<select id="list" parameterType="int" resultType="Comment">
-		SELECT * FROM comment WHERE blogId=#{blogId } ORDER BY commentDate ASC
+	<select id="list" parameterType="Map" resultMap="CommentResult">
+		SELECT * FROM comment 
+		<where>
+			<if test="blogId!=null">
+				AND blogId=#{blogId }
+			</if>
+		</where>
+		ORDER BY commentDate ASC
+		<if test="dbIndex!=null and dbNumber!=null">
+			limit #{dbIndex},#{dbNumber}
+		</if>
 	</select>
 	
 	<insert id="add" parameterType="Comment">
 		INSERT INTO comment(userIp,blogId,content,commentDate) VALUES(#{userIp},#{blog.id},#{content},now())
 	</insert>
+	
+	<select id="getTotal" parameterType="Map" resultType="int">
+		SELECT COUNT(*) FROM comment
+	</select>
+	
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM comment WHERE id=#{id}
+	</delete>
 </mapper>

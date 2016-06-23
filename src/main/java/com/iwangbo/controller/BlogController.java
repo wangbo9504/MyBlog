@@ -1,6 +1,8 @@
 package com.iwangbo.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -31,7 +33,9 @@ public class BlogController {
         ModelAndView mav = new ModelAndView();
         Blog blog = blogService.getById(id);
         mav.addObject("blog", blog);
-        List<Comment> commentList = commentService.list(blog.getId());
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("blogId", blog.getId());
+        List<Comment> commentList = commentService.list(map);
         mav.addObject("commentList", commentList);
         mav.addObject("mainPage", "myPage/blog/view.jsp");
         mav.setViewName("main");
